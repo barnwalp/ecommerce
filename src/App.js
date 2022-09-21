@@ -1,3 +1,5 @@
+import categories from './models/data.js';
+
 function App() {
   return (
     <div className="px-6 py-6">
