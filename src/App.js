@@ -1,10 +1,11 @@
 import categories from './models/data.js';
+import Directory from './components/directory/directory.component.jsx';
 
 function App() {
   return (
     <div className="px-6 py-6">
-			<h1 className="text-3xl">Hello world</h1>
-			<p>Dolor iusto laboriosam numquam fuga nemo Alias officia eveniet dolores sunt non Cumque quod in ut natus facere. Rem voluptates dolorem adipisci illum necessitatibus. Rem officiis accusantium soluta nostrum debitis.</p>
+			<h1 className="mx-auto mb-6 text-3xl max-w-max">E-Commerce</h1>
+			<Directory categories={categories} />
     </div>
   );
 }
