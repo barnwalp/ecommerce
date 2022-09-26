@@ -2,7 +2,6 @@ import CategoryItem from '../category-item/category-item.component.jsx';
 
 export default function Directory(props) {
 	const card = props.categories.map(category => {
-		// console.log(category);
 		return (
 			<CategoryItem 
 				key={category.id}
@@ -11,8 +10,7 @@ export default function Directory(props) {
 		)	
 	})
 	return (
-		<div>
-			<h1>test</h1>
+		<div className="grid grid-cols-3 gap-2">
 			{card}	
 		</div>
 	);
