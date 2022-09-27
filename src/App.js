@@ -1,12 +1,11 @@
-import categories from './models/data.js';
-import Directory from './components/directory/directory.component.jsx';
+import Home from './Routes/home/home.component.jsx';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="px-6 py-6">
-			<h1 className="mx-auto mb-6 text-3xl max-w-max">E-Commerce</h1>
-			<Directory categories={categories} />
-    </div>
+		<Routes>
+			<Route path='/home' element={<Home />} />
+		</Routes>
   );
 }
 
