@@ -1,24 +1,7 @@
 import Home from './Routes/home/home.component.jsx';
 import { Routes, Route, Outlet } from 'react-router-dom';
-
-const Navigation = () => {
-	return (
-		<div>
-			<div>
-				<h1 className="mx-auto mt-3 text-3xl max-w-max">E-Commerce</h1>
-			</div>
-			<Outlet />
-		</div>
-	)
-}
-
-const Shop = () => {
-	return (
-		<div>
-			<h2>Show Now</h2>
-		</div>
-	)
-}
+import Navigation from './Routes/navigation/navigation.component.jsx';
+import Shop from './Routes/shop/shop.component.jsx';
 
 const App = () => {
   return (
