@@ -6,6 +6,13 @@ import {
 	GoogleAuthProvider,
 } from 'firebase/auth';
 
+import { 
+	getFirestore,
+	doc,
+	getDoc,
+	setDoc
+} from 'firebase/firestore';
+
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyBhe-tSJIrY7l7D3brR6fmU_2OYPW1Msjg",
@@ -22,7 +29,18 @@ const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider({
 	prompt: "select_account"
 });
-
 export const auth = getAuth();
+
 export const signInWithGooglePopup = () => signInWithPopup(auth, provider);
+
+export const db = getFirestore();
+export const createUserDocumentFromAuth = async (userAuth) => {
+	// Despite of not having document reference and users collection, google will still generate this object
+	const userDocRef = doc(db, 'users', userAuth.uid);
+
+	console.log(userDocRef);
+	const userSnapshot = await getDoc(userDocRef);
+	console.log(userSnapshot.exists());
+};
+
 
