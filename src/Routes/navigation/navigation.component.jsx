@@ -1,4 +1,4 @@
-import { Routes, Route, Outlet, Link } from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 import { Fragment } from 'react';
 import { ReactComponent as Crown } from '../../assets/crown.svg';
 
